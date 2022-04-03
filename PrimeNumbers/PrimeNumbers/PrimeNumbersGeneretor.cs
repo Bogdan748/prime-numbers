@@ -45,17 +45,17 @@ namespace PrimeNumbers
         public static void PrintPrimes(int? n)
         {
 
-            if (n is null)
+            if (n is null || n <= 0)
             {
-                Console.WriteLine($"No input numer. Program has ended.");
+                Console.WriteLine($"No input number. Program has ended.");
                 return;
             }
             
 
             Console.WriteLine($"The first {n} prime numbers are: ");
-            foreach (int numeber in Generate())
+            foreach (int number in Generate())
             {
-                Console.Write($"{numeber}, ");
+                Console.Write($"{number}, ");
                 n--;
 
                 if (n == 0) break;
